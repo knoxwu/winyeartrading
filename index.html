@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="items">
+<head>
+    <meta charset="UTF-8">
+	<title>Winyear Trading Inc.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="http://www.templatemonster.com/favicon.ico">
+    <link rel="icon" href="http://www.templatemonster.com/favicon.ico">
+</head>
+<body>
+	<div class="desk-nav">
+	<div></div>
+		<img src="img/logo1.png">
+		<ul>
+			<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+			<li><a href="index.html" ><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
+			<li><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart</a></li>
+			<li><a href="contact.html"><i class="fa fa-arrows" aria-hidden="true"></i> Contact Us</a></li>
+		</ul>
+		
+	</div>
+
+	<div class="about-us">
+		<img src="img/banner.png" >
+	</div>
+
+
+	<div id="items-list">
+		<ul id="items" ng-controller="ItemsController as items">
+			<li  class="col-sm-3 col-md-3" ng-repeat="ii in items.item" >
+			    <div class="thumbnail block-item">
+			     	<img src="img/index-photo/{{ii.photo}}" style="width: 300px; height: 310px;">
+				    <div class="caption">
+					    <h3 class="center">{{ii.name}}</h3>
+					    <span class="label label-warning">$</span> {{ii.rate}}</h4> 
+					    <p class="center">
+					    	<a href="#" class="btn btn-primary" role="button">Add to Cart</a> 
+					    	<a href="#" class="btn btn-default" role="button">More Info</a>
+					    </p>
+				    </div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+
+    <footer class="footer-1">
+            <p><a href="">Contact and Support</a>  |  http://han9369.github.io/rent  |  <a>简体中文</a>
+    </footer>
+
+
+    <script src="js/angular.min.js"></script>
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
